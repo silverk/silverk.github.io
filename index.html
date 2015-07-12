@@ -106,15 +106,13 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1 先下载所需的三方字体库 .ttf或.odf结尾<br>2 将字体库导入到工程中<br>3 在info.plist中添加一行，直接在下拉菜单中选择<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Fonts provided by application</span><br></pre></td></tr></table></figure></p>
-<p>   然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf<br>4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *familyNames = [<span class="built_in">UIFont</span> familyNames];</span><br><span class="line">    <span class="keyword">for</span>( <span class="built_in">NSString</span> *familyName <span class="keyword">in</span> familyNames )&#123;</span><br><span class="line">        printf( <span class="string">"Family: %s \n"</span>, [familyName UTF8String] );</span><br><span class="line">        <span class="built_in">NSArray</span> *fontNames = [<span class="built_in">UIFont</span> fontNamesForFamilyName:familyName];</span><br><span class="line">        <span class="keyword">for</span>( <span class="built_in">NSString</span> *fontName <span class="keyword">in</span> fontNames )&#123;</span><br><span class="line">            printf( <span class="string">"\tFont: %s \n"</span>, [fontName UTF8String] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>在Log中找到对应的三方库名字。<br>5 这样就可以在 方法<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIFont</span> fontWithName:&lt;<span class="preprocessor">#(NSString *)#&gt; size:<span class="title">&lt;#(CGFloat)#&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<p>中调用了</p>
+        <p>1 先下载所需的三方字体库 .ttf或.odf结尾<br>2 将字体库导入到工程中<br>3 在info.plist中添加一行，直接在下拉菜单中选择<br>Fonts provided by application ,然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf<br>4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *familyNames = [<span class="built_in">UIFont</span> familyNames];</span><br><span class="line">    <span class="keyword">for</span>( <span class="built_in">NSString</span> *familyName <span class="keyword">in</span> familyNames )&#123;</span><br><span class="line">        printf( <span class="string">"Family: %s \n"</span>, [familyName UTF8String] );</span><br><span class="line">        <span class="built_in">NSArray</span> *fontNames = [<span class="built_in">UIFont</span> fontNamesForFamilyName:familyName];</span><br><span class="line">        <span class="keyword">for</span>( <span class="built_in">NSString</span> *fontName <span class="keyword">in</span> fontNames )&#123;</span><br><span class="line">            printf( <span class="string">"\tFont: %s \n"</span>, [fontName UTF8String] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>在Log中找到对应的三方库名字。<br>5 这样就可以在下列方法中调用了<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIFont</span> fontWithName:&lt;<span class="preprocessor">#(NSString *)#&gt; size:<span class="title">&lt;#(CGFloat)#&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/12/xcode6中添加自定义字体/" data-id="cic01lpst000sdz0qj0aqe998" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/12/xcode6中添加自定义字体/" data-id="cic01rymx000sfa0qtvcxx80w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字体/">字体</a></li></ul>
@@ -159,7 +157,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/10/NSDATA与NSString一些转换/" data-id="cic01lpqw0000dz0qv8ag28gs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/10/NSDATA与NSString一些转换/" data-id="cic01rykv0000fa0q3c9apw9z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -210,7 +208,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/09/合并真机与模拟器的静态库（-a）/" data-id="cic01lpsj000cdz0qsizby4kw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/09/合并真机与模拟器的静态库（-a）/" data-id="cic01rymn000cfa0qa7vbvzqz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/静态库/">静态库</a></li></ul>
@@ -255,7 +253,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/09/iOS下如何隐藏电量等状态栏/" data-id="cic01lpsy0011dz0qwm5l500l" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/09/iOS下如何隐藏电量等状态栏/" data-id="cic01ryn30011fa0q69gmw1w0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/电量-状态栏/">电量 状态栏</a></li></ul>
@@ -301,7 +299,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/几个颜色的网站/" data-id="cic01lpsl000gdz0qnvot1bos" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/几个颜色的网站/" data-id="cic01rymp000gfa0qza4786sk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/颜色-网站-设计/">颜色 网站 设计</a></li></ul>
@@ -349,7 +347,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/iphone6p更新iOS9，另iOS9回滚至iOS8/" data-id="cic01lpsw000xdz0qlnnvpkxn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/iphone6p更新iOS9，另iOS9回滚至iOS8/" data-id="cic01ryn0000xfa0qkdzbkdgp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-Bug/">iOS Bug</a></li></ul>
@@ -393,7 +391,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/失眠者的纠结/" data-id="cic01lpsg0008dz0qqcrw4rlo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/失眠者的纠结/" data-id="cic01ryml0008fa0qzgofbb9r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/失眠-纠结-当年/">失眠 纠结 当年</a></li></ul>
@@ -440,7 +438,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/小场景电影/" data-id="cic01lpse0006dz0q6d7vwqc8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/小场景电影/" data-id="cic01rym90006fa0qu8e7s7rm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -492,7 +490,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/青城山游记/" data-id="cic01lps00003dz0qs52rxb7v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/青城山游记/" data-id="cic01rylv0003fa0qwsj0ug82" class="article-share-link">Share</a>
       
       
     </footer>
@@ -547,7 +545,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/冰雨——股市篇/" data-id="cic01lpso000ldz0q39umigbt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/冰雨——股市篇/" data-id="cic01rymr000lfa0q8qzt9cro" class="article-share-link">Share</a>
       
       
     </footer>

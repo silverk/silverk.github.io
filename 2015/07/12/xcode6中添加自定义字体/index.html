@@ -5,19 +5,16 @@
   
   <title>xcode6中添加自定义字体 | Silverk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1 先下载所需的三方字体库 .ttf或.odf结尾2 将字体库导入到工程中3 在info.plist中添加一行，直接在下拉菜单中选择1Fonts provided by application
-   然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：12345678">
+  <meta name="description" content="1 先下载所需的三方字体库 .ttf或.odf结尾2 将字体库导入到工程中3 在info.plist中添加一行，直接在下拉菜单中选择Fonts provided by application ,然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：12345678NSA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="xcode6中添加自定义字体">
 <meta property="og:url" content="http://yoursite.com/2015/07/12/xcode6中添加自定义字体/index.html">
 <meta property="og:site_name" content="Silverk">
-<meta property="og:description" content="1 先下载所需的三方字体库 .ttf或.odf结尾2 将字体库导入到工程中3 在info.plist中添加一行，直接在下拉菜单中选择1Fonts provided by application
-   然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：12345678">
-<meta property="og:updated_time" content="2015-07-12T05:30:28.000Z">
+<meta property="og:description" content="1 先下载所需的三方字体库 .ttf或.odf结尾2 将字体库导入到工程中3 在info.plist中添加一行，直接在下拉菜单中选择Fonts provided by application ,然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：12345678NSA">
+<meta property="og:updated_time" content="2015-07-12T05:35:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xcode6中添加自定义字体">
-<meta name="twitter:description" content="1 先下载所需的三方字体库 .ttf或.odf结尾2 将字体库导入到工程中3 在info.plist中添加一行，直接在下拉菜单中选择1Fonts provided by application
-   然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：12345678">
+<meta name="twitter:description" content="1 先下载所需的三方字体库 .ttf或.odf结尾2 将字体库导入到工程中3 在info.plist中添加一行，直接在下拉菜单中选择Fonts provided by application ,然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：12345678NSA">
 <meta name="twitter:creator" content="@coolwuxing">
   
     <link rel="alternative" href="/atom.xml" title="Silverk" type="application/atom+xml">
@@ -108,15 +105,13 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1 先下载所需的三方字体库 .ttf或.odf结尾<br>2 将字体库导入到工程中<br>3 在info.plist中添加一行，直接在下拉菜单中选择<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Fonts provided by application</span><br></pre></td></tr></table></figure></p>
-<p>   然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf<br>4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *familyNames = [<span class="built_in">UIFont</span> familyNames];</span><br><span class="line">    <span class="keyword">for</span>( <span class="built_in">NSString</span> *familyName <span class="keyword">in</span> familyNames )&#123;</span><br><span class="line">        printf( <span class="string">"Family: %s \n"</span>, [familyName UTF8String] );</span><br><span class="line">        <span class="built_in">NSArray</span> *fontNames = [<span class="built_in">UIFont</span> fontNamesForFamilyName:familyName];</span><br><span class="line">        <span class="keyword">for</span>( <span class="built_in">NSString</span> *fontName <span class="keyword">in</span> fontNames )&#123;</span><br><span class="line">            printf( <span class="string">"\tFont: %s \n"</span>, [fontName UTF8String] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>在Log中找到对应的三方库名字。<br>5 这样就可以在 方法<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIFont</span> fontWithName:&lt;<span class="preprocessor">#(NSString *)#&gt; size:<span class="title">&lt;#(CGFloat)#&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<p>中调用了</p>
+        <p>1 先下载所需的三方字体库 .ttf或.odf结尾<br>2 将字体库导入到工程中<br>3 在info.plist中添加一行，直接在下拉菜单中选择<br>Fonts provided by application ,然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf<br>4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *familyNames = [<span class="built_in">UIFont</span> familyNames];</span><br><span class="line">    <span class="keyword">for</span>( <span class="built_in">NSString</span> *familyName <span class="keyword">in</span> familyNames )&#123;</span><br><span class="line">        printf( <span class="string">"Family: %s \n"</span>, [familyName UTF8String] );</span><br><span class="line">        <span class="built_in">NSArray</span> *fontNames = [<span class="built_in">UIFont</span> fontNamesForFamilyName:familyName];</span><br><span class="line">        <span class="keyword">for</span>( <span class="built_in">NSString</span> *fontName <span class="keyword">in</span> fontNames )&#123;</span><br><span class="line">            printf( <span class="string">"\tFont: %s \n"</span>, [fontName UTF8String] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>在Log中找到对应的三方库名字。<br>5 这样就可以在下列方法中调用了<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIFont</span> fontWithName:&lt;<span class="preprocessor">#(NSString *)#&gt; size:<span class="title">&lt;#(CGFloat)#&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/12/xcode6中添加自定义字体/" data-id="cic01lpst000sdz0qj0aqe998" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/12/xcode6中添加自定义字体/" data-id="cic01rymx000sfa0qtvcxx80w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字体/">字体</a></li></ul>
