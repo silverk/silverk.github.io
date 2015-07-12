@@ -80,6 +80,51 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-xcode6中添加自定义字体" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/12/xcode6中添加自定义字体/" class="article-date">
+  <time datetime="2015-07-12T05:16:08.000Z" itemprop="datePublished">2015-07-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/12/xcode6中添加自定义字体/">xcode6中添加自定义字体</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1 先下载所需的三方字体库 .ttf结尾<br>2 将字体库导入到工程中<br>3 在info.plist中添加一行，直接在下拉菜单中选择<figure class="highlight obj-c"><figcaption><span>Fonts provided by application ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   然后在其子菜单中```obj-c item0 ```key对应的value值中添加刚导入的三方库名字xxx<span class="variable">.ttf</span></span><br><span class="line"><span class="number">4</span> 在```obj-c AppDelegate ``` 或者``` obj-c viewdidload ```中输入以下代码：</span><br><span class="line">```obj-c</span><br><span class="line"><span class="built_in">NSArray</span> *familyNames = [<span class="built_in">UIFont</span> familyNames];</span><br><span class="line">    <span class="keyword">for</span>( <span class="built_in">NSString</span> *familyName <span class="keyword">in</span> familyNames )&#123;</span><br><span class="line">        printf( <span class="string">"Family: %s \n"</span>, [familyName UTF8String] );</span><br><span class="line">        <span class="built_in">NSArray</span> *fontNames = [<span class="built_in">UIFont</span> fontNamesForFamilyName:familyName];</span><br><span class="line">        <span class="keyword">for</span>( <span class="built_in">NSString</span> *fontName <span class="keyword">in</span> fontNames )&#123;</span><br><span class="line">            printf( <span class="string">"\tFont: %s \n"</span>, [fontName UTF8String] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>在Log中找到对应的三方库名字。<br>5 这样就可以在 方法<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIFont</span> fontWithName:&lt;<span class="preprocessor">#(NSString *)#&gt; size:<span class="title">&lt;#(CGFloat)#&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>中调用了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/12/xcode6中添加自定义字体/" data-id="cic01dy9e000sc80qpggck8ok" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字体/">字体</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-NSDATA与NSString一些转换" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/07/10/NSDATA与NSString一些转换/" class="article-date">
@@ -113,7 +158,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/10/NSDATA与NSString一些转换/" data-id="cibwzaglg0000na0qe8kf28uq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/10/NSDATA与NSString一些转换/" data-id="cic01dy7e0000c80qdbv9x839" class="article-share-link">Share</a>
       
       
     </footer>
@@ -164,7 +209,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/09/合并真机与模拟器的静态库（-a）/" data-id="cibwzagme000cna0qjz1b7z0w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/09/合并真机与模拟器的静态库（-a）/" data-id="cic01dy95000cc80qphltun6x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/静态库/">静态库</a></li></ul>
@@ -209,7 +254,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/09/iOS下如何隐藏电量等状态栏/" data-id="cibwzagmp000wna0qgy6t6bx6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/09/iOS下如何隐藏电量等状态栏/" data-id="cic01dy9j0011c80qlve1r5iv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/电量-状态栏/">电量 状态栏</a></li></ul>
@@ -255,7 +300,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/几个颜色的网站/" data-id="cibwzagmg000gna0q3ldz3asf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/几个颜色的网站/" data-id="cic01dy97000gc80qmdu2274t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/颜色-网站-设计/">颜色 网站 设计</a></li></ul>
@@ -303,7 +348,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/iphone6p更新iOS9，另iOS9回滚至iOS8/" data-id="cibwzagmn000sna0qfcdze0zc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/iphone6p更新iOS9，另iOS9回滚至iOS8/" data-id="cic01dy9h000xc80qph47v7d1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-Bug/">iOS Bug</a></li></ul>
@@ -347,7 +392,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/失眠者的纠结/" data-id="cibwzagmb0008na0q486w2iuu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/失眠者的纠结/" data-id="cic01dy920008c80qgvv4q1no" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/失眠-纠结-当年/">失眠 纠结 当年</a></li></ul>
@@ -394,7 +439,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/小场景电影/" data-id="cibwzagma0006na0qczczoh4r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/小场景电影/" data-id="cic01dy8q0006c80q8so4v9yw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -446,7 +491,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/青城山游记/" data-id="cibwzagly0003na0qovb9le4h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/青城山游记/" data-id="cic01dy7o0003c80qpxmqjwkh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -501,7 +546,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/冰雨——股市篇/" data-id="cibwzagmi000lna0qyq9x9ylb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/08/冰雨——股市篇/" data-id="cic01dy99000lc80q8qh6vw43" class="article-share-link">Share</a>
       
       
     </footer>
@@ -511,51 +556,10 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-今日一喜" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/08/今日一喜/" class="article-date">
-  <time datetime="2015-07-08T06:07:02.000Z" itemprop="datePublished">2015-07-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/随笔/">随笔</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/08/今日一喜/">今日一喜</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一篇献给刚诞生的外甥">第一篇献给刚诞生的外甥</h2><p>  2015年07月08日11点15分，小外甥诞生了。</p>
-<p>  紧张了几天的神经终于可以放松下了，即使股票仍然大跌。明天去找妹夫要张照片，改个头像。</p>
-<p>  昨晚翻了半天字典，觉得“王炯介” 这个名字不错。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/今日一喜/" data-id="cibwzagmk000ona0q85idj51u" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/诞生/">诞生</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         
@@ -565,7 +569,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/UI设计/">UI设计</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS问题总结/">iOS问题总结</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/股票/">股票</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">4</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/UI设计/">UI设计</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS问题总结/">iOS问题总结</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/股票/">股票</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -574,7 +578,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS-Bug/">iOS Bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/失眠-纠结-当年/">失眠 纠结 当年</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电量-状态栏/">电量 状态栏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诞生/">诞生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/静态库/">静态库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/颜色-网站-设计/">颜色 网站 设计</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS-Bug/">iOS Bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/失眠-纠结-当年/">失眠 纠结 当年</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电量-状态栏/">电量 状态栏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诞生/">诞生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/静态库/">静态库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/颜色-网站-设计/">颜色 网站 设计</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -583,7 +587,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/iOS-Bug/" style="font-size: 10px;">iOS Bug</a> <a href="/tags/失眠-纠结-当年/" style="font-size: 10px;">失眠 纠结 当年</a> <a href="/tags/电量-状态栏/" style="font-size: 10px;">电量 状态栏</a> <a href="/tags/诞生/" style="font-size: 10px;">诞生</a> <a href="/tags/静态库/" style="font-size: 10px;">静态库</a> <a href="/tags/颜色-网站-设计/" style="font-size: 10px;">颜色 网站 设计</a>
+      <a href="/tags/iOS-Bug/" style="font-size: 10px;">iOS Bug</a> <a href="/tags/失眠-纠结-当年/" style="font-size: 10px;">失眠 纠结 当年</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/电量-状态栏/" style="font-size: 10px;">电量 状态栏</a> <a href="/tags/诞生/" style="font-size: 10px;">诞生</a> <a href="/tags/静态库/" style="font-size: 10px;">静态库</a> <a href="/tags/颜色-网站-设计/" style="font-size: 10px;">颜色 网站 设计</a>
     </div>
   </div>
 
@@ -592,7 +596,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">10</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">11</span></li></ul>
     </div>
   </div>
 
@@ -602,6 +606,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/07/12/xcode6中添加自定义字体/">xcode6中添加自定义字体</a>
+          </li>
         
           <li>
             <a href="/2015/07/10/NSDATA与NSString一些转换/">NSDATA与NSString一些转换</a>
@@ -617,10 +625,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2015/07/08/几个颜色的网站/">几个颜色的网站</a>
-          </li>
-        
-          <li>
-            <a href="/2015/07/08/iphone6p更新iOS9，另iOS9回滚至iOS8/">iphone6p更新iOS9，另iOS9回滚至iOS8</a>
           </li>
         
       </ul>
