@@ -1,199 +1,340 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
 <head>
-  <meta charset="utf-8">
   
-  <title>Silverk</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Silverk">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Silverk">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Silverk">
-<meta name="twitter:description">
-<meta name="twitter:creator" content="@coolwuxing">
-  
-    <link rel="alternative" href="/atom.xml" title="Silverk" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-43935113-3', 'auto');
-ga('send', 'pageview');
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: ''
+    },
+    sidebar: 'post'
+  };
 </script>
-<!-- End Google Analytics -->
 
 
+
+
+  <title> Silverk </title>
 </head>
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <div id="header">
-  <div id="banner">
-    <div id="cover"></div>
-    <div id="stars"></div>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
   </div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Silverk</a>
-      </h1>
+<![endif]-->
+
+  <div class="container one-column 
+   page-home 
+">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Silverk</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首頁
+          </a>
+        </li>
+      
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分類
+          </a>
+        </li>
+      
         
-      </nav>
-      <nav id="sub-nav">
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            歸檔
+          </a>
+        </li>
+      
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            標籤
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</div>
+
+
       </div>
     </div>
-  </div>
-</div>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-xcode6中添加自定义字体" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/12/xcode6中添加自定义字体/" class="article-date">
-  <time datetime="2015-07-12T05:16:08.000Z" itemprop="datePublished">2015-07-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS/">iOS</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+  <div id="posts" class="posts-expand">
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/12/xcode6中添加自定义字体/">xcode6中添加自定义字体</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <p>1 先下载所需的三方字体库 .ttf或.odf结尾<br>2 将字体库导入到工程中<br>3 在info.plist中添加一行，直接在下拉菜单中选择<br>Fonts provided by application ,然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf<br>4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *familyNames = [<span class="built_in">UIFont</span> familyNames];</span><br><span class="line">    <span class="keyword">for</span>( <span class="built_in">NSString</span> *familyName <span class="keyword">in</span> familyNames )&#123;</span><br><span class="line">        printf( <span class="string">"Family: %s \n"</span>, [familyName UTF8String] );</span><br><span class="line">        <span class="built_in">NSArray</span> *fontNames = [<span class="built_in">UIFont</span> fontNamesForFamilyName:familyName];</span><br><span class="line">        <span class="keyword">for</span>( <span class="built_in">NSString</span> *fontName <span class="keyword">in</span> fontNames )&#123;</span><br><span class="line">            printf( <span class="string">"\tFont: %s \n"</span>, [fontName UTF8String] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/12/xcode6中添加自定义字体/">
+                xcode6中添加自定义字体
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-12
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/iOS/">iOS</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>1 先下载所需的三方字体库 .ttf或.odf结尾<br>2 将字体库导入到工程中<br>3 在info.plist中添加一行，直接在下拉菜单中选择<br>Fonts provided by application ,然后在其子菜单中 item0 key对应的value值中添加刚导入的三方库名字xxx.ttf<br>4 在 AppDelegate  或者 obj-c viewdidload 中输入以下代码：<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *familyNames = [<span class="built_in">UIFont</span> familyNames];</span><br><span class="line">    <span class="keyword">for</span>( <span class="built_in">NSString</span> *familyName <span class="keyword">in</span> familyNames )&#123;</span><br><span class="line">        printf( <span class="string">"Family: %s \n"</span>, [familyName UTF8String] );</span><br><span class="line">        <span class="built_in">NSArray</span> *fontNames = [<span class="built_in">UIFont</span> fontNamesForFamilyName:familyName];</span><br><span class="line">        <span class="keyword">for</span>( <span class="built_in">NSString</span> *fontName <span class="keyword">in</span> fontNames )&#123;</span><br><span class="line">            printf( <span class="string">"\tFont: %s \n"</span>, [fontName UTF8String] );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 <p>在Log中找到对应的三方库名字。<br>5 这样就可以在下列方法中调用了<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIFont</span> fontWithName:&lt;<span class="preprocessor">#(NSString *)#&gt; size:<span class="title">&lt;#(CGFloat)#&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/12/xcode6中添加自定义字体/" data-id="cic01rymx000sfa0qtvcxx80w" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字体/">字体</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-NSDATA与NSString一些转换" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/10/NSDATA与NSString一些转换/" class="article-date">
-  <time datetime="2015-07-10T01:58:42.000Z" itemprop="datePublished">2015-07-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS问题总结/">iOS问题总结</a>
+        <div class="post-eof"></div>
+      
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/10/NSDATA与NSString一些转换/">
+                NSDATA与NSString一些转换
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-10
+        </span>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/10/NSDATA与NSString一些转换/">NSDATA与NSString一些转换</a>
-    </h1>
-  
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/iOS问题总结/">iOS问题总结</a>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
-        <figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">+(<span class="built_in">NSString</span>*)dataToString:(<span class="built_in">NSData</span>*)data&#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span>*send1 = [datadescription];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSMutableString</span>*mStr = [[<span class="built_in">NSMutableStringalloc</span>]initWithString:send1];</span><br><span class="line"></span><br><span class="line">[mStrdeleteCharactersInRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>,<span class="number">1</span>)];</span><br><span class="line"></span><br><span class="line">[mStrdeleteCharactersInRange:<span class="built_in">NSMakeRange</span>(mStr<span class="variable">.length</span>-<span class="number">1</span>,<span class="number">1</span>)];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span>*send = [mStrstringByReplacingOccurrencesOfString:<span class="string">@" "</span>withString:<span class="string">@""</span>];</span><br><span class="line"></span><br><span class="line">returnsend;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        
+          <figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">+(<span class="built_in">NSString</span>*)dataToString:(<span class="built_in">NSData</span>*)data&#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span>*send1 = [datadescription];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSMutableString</span>*mStr = [[<span class="built_in">NSMutableStringalloc</span>]initWithString:send1];</span><br><span class="line"></span><br><span class="line">[mStrdeleteCharactersInRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>,<span class="number">1</span>)];</span><br><span class="line"></span><br><span class="line">[mStrdeleteCharactersInRange:<span class="built_in">NSMakeRange</span>(mStr<span class="variable">.length</span>-<span class="number">1</span>,<span class="number">1</span>)];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span>*send = [mStrstringByReplacingOccurrencesOfString:<span class="string">@" "</span>withString:<span class="string">@""</span>];</span><br><span class="line"></span><br><span class="line">returnsend;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">+(<span class="built_in">NSString</span>*)dataToHexString:(<span class="built_in">NSData</span>*)data&#123;</span><br><span class="line"></span><br><span class="line">Byte*bytes = (Byte*)[databytes];</span><br><span class="line"></span><br><span class="line"><span class="comment">//下面是Byte转换为16进制。</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span>*hexStr=<span class="string">@""</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(inti=<span class="number">0</span>;i&lt;[datalength];i++)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span>*newHexStr = [<span class="built_in">NSStringstringWithFormat</span>:<span class="string">@"%x"</span>,bytes[i]&amp;<span class="number">0xff</span>];<span class="comment">///16进制数</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>([newHexStrlength]==<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">hexStr = [<span class="built_in">NSStringstringWithFormat</span>:<span class="string">@"%@0%@"</span>,hexStr,newHexStr];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">hexStr = [<span class="built_in">NSStringstringWithFormat</span>:<span class="string">@"%@%@"</span>,hexStr,newHexStr];</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">returnhexStr;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">+(<span class="built_in">NSData</span>*)hexStringToData:(<span class="built_in">NSString</span>*)str</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span>*strTmp = [strstringByReplacingOccurrencesOfString:<span class="string">@"0x"</span>withString:<span class="string">@""</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSIntegerlengthTmp</span> =strTmp<span class="variable">.length</span>/<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">SignedBytebytes[lengthTmp];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(inti=<span class="number">0</span>; i</span><br><span class="line"></span><br><span class="line">intj = i*<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSString</span>*tmp = [strTmpsubstringWithRange:<span class="built_in">NSMakeRange</span>(j,<span class="number">2</span>)];</span><br><span class="line"></span><br><span class="line">unsignedintanInt;</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSScanner</span>*scanner = [[<span class="built_in">NSScanneralloc</span>]initWithString:tmp];</span><br><span class="line"></span><br><span class="line">[scannerscanHexInt:&amp;anInt];</span><br><span class="line"></span><br><span class="line">bytes[i] = anInt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span>[<span class="built_in">NSDatadataWithBytes</span>:byteslength:lengthTmp];</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/10/NSDATA与NSString一些转换/" data-id="cic01rykv0000fa0q3c9apw9z" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-合并真机与模拟器的静态库（-a）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/09/合并真机与模拟器的静态库（-a）/" class="article-date">
-  <time datetime="2015-07-09T07:43:27.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS问题总结/">iOS问题总结</a>
+        <div class="post-eof"></div>
+      
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/09/合并真机与模拟器的静态库（-a）/">
+                合并真机与模拟器的静态库（.a）
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-09
+        </span>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/合并真机与模拟器的静态库（-a）/">合并真机与模拟器的静态库（.a）</a>
-    </h1>
-  
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/iOS问题总结/">iOS问题总结</a>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
-        <p>制作真机静态库时，不能连接特定的真机设备制作，不然只能在特定机型上使用；</p>
+      
+
+      
+        
+          <p>制作真机静态库时，不能连接特定的真机设备制作，不然只能在特定机型上使用；</p>
 <p>制作模拟器静态库时，iphone4,5使用的是386  iphone5s至以后使用的是X86-64位，所以要设配这两种模态。</p>
 <p>先做好真机与模拟器的静态库，打开终端管理器，输入lipo -create +(真机及模拟器的静态库文件)(直接拖动相应文件进来会自动生成地址) + -output  +(输出的地址)</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lipo -create <span class="regexp">/Users/</span>**<span class="regexp">/Desktop/</span>cblt<span class="regexp">/1/</span>test.a <span class="regexp">/Users/</span>**<span class="regexp">/Desktop/</span>cblt<span class="regexp">/2/</span>test.a -output <span class="regexp">/Users/</span>**<span class="regexp">/Desktop/</span>cblt<span class="regexp">/3/U</span>test.a</span><br></pre></td></tr></table></figure>
@@ -205,276 +346,440 @@ ga('send', 'pageview');
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> f <span class="keyword">in</span> ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/*; <span class="keyword">do</span> defaults write <span class="string">"<span class="variable">$f</span>/Contents/Info"</span> DVTPlugInCompatibilityUUIDs -array-add <span class="variable">$XCODEUUID</span></span><br><span class="line">&gt;<span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 <p>然后再调用上面的方法即OK</p>
 
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/09/合并真机与模拟器的静态库（-a）/" data-id="cic01rymn000cfa0qa7vbvzqz" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/静态库/">静态库</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-iOS下如何隐藏电量等状态栏" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/09/iOS下如何隐藏电量等状态栏/" class="article-date">
-  <time datetime="2015-07-09T07:11:43.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS问题总结/">iOS问题总结</a>
+        <div class="post-eof"></div>
+      
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/09/iOS下如何隐藏电量等状态栏/">
+                iOS下如何隐藏电量等状态栏
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-09
+        </span>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/iOS下如何隐藏电量等状态栏/">iOS下如何隐藏电量等状态栏</a>
-    </h1>
-  
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/iOS问题总结/">iOS问题总结</a>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
-        <p>iOS7～下需要现在info.plist下添加<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">View controller-based status bar appearance，</span><br></pre></td></tr></table></figure></p>
+      
+
+      
+        
+          <p>iOS7～下需要现在info.plist下添加<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">View controller-based status bar appearance，</span><br></pre></td></tr></table></figure></p>
 <p>并改为NO</p>
 <p>然后在每个VC里面就可以通过代码设置开启或关闭</p>
 <figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="built_in">UIApplicationsharedApplication</span>]setStatusBarHidden:NOwithAnimation:<span class="built_in">UIStatusBarAnimationFade</span>];</span><br></pre></td></tr></table></figure>
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/09/iOS下如何隐藏电量等状态栏/" data-id="cic01ryn30011fa0q69gmw1w0" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/电量-状态栏/">电量 状态栏</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-几个颜色的网站" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/08/几个颜色的网站/" class="article-date">
-  <time datetime="2015-07-08T08:07:59.000Z" itemprop="datePublished">2015-07-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/UI设计/">UI设计</a>
+        <div class="post-eof"></div>
+      
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/08/几个颜色的网站/">
+                几个颜色的网站
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-08
+        </span>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/08/几个颜色的网站/">几个颜色的网站</a>
-    </h1>
-  
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/UI设计/">UI设计</a>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
-        <h2 id="几个颜色的网站">几个颜色的网站</h2><p>几个比较好的颜色网站：</p>
+      
+
+      
+        
+          <h2 id="几个颜色的网站">几个颜色的网站</h2><p>几个比较好的颜色网站：</p>
 <p><a href="http://ylbook.com/cms/web/chuantongsecai/chuantongsecai.htm" target="_blank" rel="external">中国传统色彩颜色表</a></p>
 <p><a href="http://blog.sina.com.cn/s/blog_905d6ef501010cv3.html" target="_blank" rel="external">R G B 颜色表</a></p>
 <p><a href="http://www.cnblogs.com/android100/archive/2013/11/07/android-setalpha.html" target="_blank" rel="external">常用RGB颜色表</a></p>
 
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/几个颜色的网站/" data-id="cic01rymp000gfa0qza4786sk" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/颜色-网站-设计/">颜色 网站 设计</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-iphone6p更新iOS9，另iOS9回滚至iOS8" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/08/iphone6p更新iOS9，另iOS9回滚至iOS8/" class="article-date">
-  <time datetime="2015-07-08T08:04:48.000Z" itemprop="datePublished">2015-07-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS问题总结/">iOS问题总结</a>
+        <div class="post-eof"></div>
+      
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/08/iphone6p更新iOS9，另iOS9回滚至iOS8/">
+                iphone6p更新iOS9，另iOS9回滚至iOS8
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-08
+        </span>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/08/iphone6p更新iOS9，另iOS9回滚至iOS8/">iphone6p更新iOS9，另iOS9回滚至iOS8</a>
-    </h1>
-  
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/iOS问题总结/">iOS问题总结</a>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
-        <h2 id="iphone6p更新iOS9，另iOS9回滚至iOS8">iphone6p更新iOS9，另iOS9回滚至iOS8</h2><p>警告！！千万别升级到iOS9，各种程序崩溃！</p>
+      
+
+      
+        
+          <h2 id="iphone6p更新iOS9，另iOS9回滚至iOS8">iphone6p更新iOS9，另iOS9回滚至iOS8</h2><p>警告！！千万别升级到iOS9，各种程序崩溃！</p>
 <p>1 需要去官网下载beta版软件，注意：如果手机没有加入开发者账号，不要随便刷机，那样不但激活不了手机而且还刷不回去</p>
 <p>2 下载完后，手机连接mac电脑，打开itunes，最新的itunes版本是12.1.2.27,此版本刷机与网络上方法不同，需要按住option键并再点击itunes上iphone目录栏－－“摘要”－－“恢复”按钮</p>
 <p>3 选择好你下载的beta固件，剩下的交给apple处理就可以了。</p>
 <p>iOS9回滚至iOS8操作</p>
 <p>只要下载iOS8.3固件，再使用上面的方法就OK了</p>
 
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/iphone6p更新iOS9，另iOS9回滚至iOS8/" data-id="cic01ryn0000xfa0qkdzbkdgp" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS-Bug/">iOS Bug</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-失眠者的纠结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/08/失眠者的纠结/" class="article-date">
-  <time datetime="2015-07-08T07:59:15.000Z" itemprop="datePublished">2015-07-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+        <div class="post-eof"></div>
+      
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/08/失眠者的纠结/">
+                失眠者的纠结
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-08
+        </span>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/08/失眠者的纠结/">失眠者的纠结</a>
-    </h1>
-  
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/随笔/">随笔</a>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
-        <h2 id="失眠者的纠结">失眠者的纠结</h2><p> 失眠：躺在床上，闭着眼睛，死活睡不着。<br> <br>  脑子里掠过模糊不清的奇思怪状的令人纠结玩意儿：<br> <br>  失眠了，长久下去是不是会跟克里斯蒂安的机械师一样？可为啥我还在长胖呢？机械师我竟然理解错了，明明是克里斯蒂安撞了人不敢面对才导致骨瘦如柴，当年我怎么判断是无休止的车间麻木工作导致的呢？是当年对工作的恐慌么？想不通了，似乎真是如此！记忆的碎片逐渐浮现在眼前，一个瘦骨嶙嶙的人渐渐在脑海里清晰，颤抖着竖起中指，暗骂声音：“FUCK！”。<br>  <br>        人影渐渐消失，另两个模糊着争辩着的身影开始浮现。那是什么时候的事？哦，当年高考。还记得那个黑黑的小丫头坐在教室中间苦思冥想的表情，哦，那是考数学！左顾右盼硬熬了两个小时，心神不宁的走出教室，回头看了一眼时，画面定格了：忧愁的小丫头在走廊上低声向她父亲抱怨数学是怎么的难。好熟悉，我当时的表情绝对是震惊了，我在哪见过！<br>        <br>       熟悉而又清晰的画面飞过一个个春秋，始终还是个谜，今生都无法解答了吧！固执偏执的念头一再涌起，掀起着阵阵黑色的浪花。放佛看到莱昂纳多·迪卡普里奥沿着海风站在驶往禁闭岛的轮船上。禁闭岛，呦！莱昂纳多·迪卡普里奥是正常的？还是疯的？我坚信两者都有可能，像恐怖游轮样无限的循环着。无限，无限，∞！<br>       <br>      1+1等于几，陈景润证明了什么？高斯不等式是啥？爱因斯坦相对论是什么？量子理论？薛定谔的猫？盒子理论？弦理论？无限宇宙？宇宙唯一？</p>
+      
+
+      
+        
+          <h2 id="失眠者的纠结">失眠者的纠结</h2><p> 失眠：躺在床上，闭着眼睛，死活睡不着。<br> <br>  脑子里掠过模糊不清的奇思怪状的令人纠结玩意儿：<br> <br>  失眠了，长久下去是不是会跟克里斯蒂安的机械师一样？可为啥我还在长胖呢？机械师我竟然理解错了，明明是克里斯蒂安撞了人不敢面对才导致骨瘦如柴，当年我怎么判断是无休止的车间麻木工作导致的呢？是当年对工作的恐慌么？想不通了，似乎真是如此！记忆的碎片逐渐浮现在眼前，一个瘦骨嶙嶙的人渐渐在脑海里清晰，颤抖着竖起中指，暗骂声音：“FUCK！”。<br>  <br>        人影渐渐消失，另两个模糊着争辩着的身影开始浮现。那是什么时候的事？哦，当年高考。还记得那个黑黑的小丫头坐在教室中间苦思冥想的表情，哦，那是考数学！左顾右盼硬熬了两个小时，心神不宁的走出教室，回头看了一眼时，画面定格了：忧愁的小丫头在走廊上低声向她父亲抱怨数学是怎么的难。好熟悉，我当时的表情绝对是震惊了，我在哪见过！<br>        <br>       熟悉而又清晰的画面飞过一个个春秋，始终还是个谜，今生都无法解答了吧！固执偏执的念头一再涌起，掀起着阵阵黑色的浪花。放佛看到莱昂纳多·迪卡普里奥沿着海风站在驶往禁闭岛的轮船上。禁闭岛，呦！莱昂纳多·迪卡普里奥是正常的？还是疯的？我坚信两者都有可能，像恐怖游轮样无限的循环着。无限，无限，∞！<br>       <br>      1+1等于几，陈景润证明了什么？高斯不等式是啥？爱因斯坦相对论是什么？量子理论？薛定谔的猫？盒子理论？弦理论？无限宇宙？宇宙唯一？</p>
 <p>    睡吧？睡了!</p>
 
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/失眠者的纠结/" data-id="cic01ryml0008fa0qzgofbb9r" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/失眠-纠结-当年/">失眠 纠结 当年</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-小场景电影" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/08/小场景电影/" class="article-date">
-  <time datetime="2015-07-08T07:42:07.000Z" itemprop="datePublished">2015-07-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+        <div class="post-eof"></div>
+      
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/08/小场景电影/">
+                小场景电影
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-08
+        </span>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/08/小场景电影/">小场景电影</a>
-    </h1>
-  
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/随笔/">随笔</a>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
-        <h2 id="小场景电影">小场景电影</h2><p>小场景电影拼的就是剧情与演技，剧情靠的就是对白。</p>
+      
+
+      
+        
+          <h2 id="小场景电影">小场景电影</h2><p>小场景电影拼的就是剧情与演技，剧情靠的就是对白。</p>
 <p>《这个男人来自地球》是我看的最“科幻”的科幻电影了。全场没有高特效也没有奇形怪状的生物，有的只是一间房、一群正常人，再加上一场非正常的侃大山。但就是这么简单的至极点的场景，却包含了几千年的历史讲述着“神”的传奇。</p>
 <p>《狙击电话亭》也是一部。全部电影集中在那条街那个孤零零的电话亭中。悬疑，阴谋，威胁，死亡，妥协，反抗…..通过一个电话亭，诠释的淋漓尽致。</p>
 <p>《杀戮》走起了生活路线：一个客厅，两个家庭，四个人。起源仅仅是两家小孩打架，处理的过程中却暴露出成人，家庭，男人，女人种种矛盾。</p>
 <p>喜欢这种电影，想想如果中国整几个天南海北的人一起侃大山（弄个好点的剧情），也许更会出彩。</p>
 
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/小场景电影/" data-id="cic01rym90006fa0qu8e7s7rm" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-青城山游记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/08/青城山游记/" class="article-date">
-  <time datetime="2015-07-08T07:40:22.000Z" itemprop="datePublished">2015-07-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/随笔/">随笔</a>
+        <div class="post-eof"></div>
+      
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/08/青城山游记/">
+                青城山游记
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-08
+        </span>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/08/青城山游记/">青城山游记</a>
-    </h1>
-  
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/随笔/">随笔</a>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
-        <h2 id="青城山游记">青城山游记</h2><p>都市的喧嚣繁华让我怀念那青城山的幽静。</p>
+      
+
+      
+        
+          <h2 id="青城山游记">青城山游记</h2><p>都市的喧嚣繁华让我怀念那青城山的幽静。</p>
 <p>两年前那个细雨绵绵的下午，独自坐车来到青城山。下了动车，雨已经停了。前方是片不大的场地，停着几辆摆渡车。远眺青城，雾蒙蒙的山峰似巍峨近在眼前又仿佛遥不可及，整个人似乎融于那天地之中，不知身在何处。</p>
 <p>摆渡车只至山门入口，山门入口至山门仍需走约半小时路程。有幸结识一对常年至此度假的中年夫妇，遂结伴同行。男子个性温和，与我谈论这道家的圣地，又感叹年华的逝去；女子却有这颗少女的心，时不时在那青草丛中摘下一朵野花或是追逐着那雨后偷跑出来的蝴蝶。宽敞的大道只有我们三个，两侧的松树郁郁葱葱，路边的青草雨后欲显娇嫩。</p>
 <p>行至山门，与那对夫妇分别，他们要去常年往来的山庄转转，我便独自一人穿门而上；古典式的山门在旁边巨树衬托下显的有点渺小。进门不远分两条道，一条沿左从山荫亭过凝翠桥、访宁桥、天师洞至祖师殿，而后右上达上清宫,呼应亭，另一条直上过半山亭再左上至上清宫，呼应亭。决定先从左上再直接下。</p>
@@ -487,46 +792,75 @@ ga('send', 'pageview');
 <p>以后算是真正的爬山了，卯足劲从祖师殿到上清宫最后到前山最高点呼应亭。观山下云雾缭绕闻仙乐邈邈，似置身于仙境之中。沉醉半晌方从另一路而下。</p>
 <p>回去的路上又下起了雨，越下越大，渐渐将青城山在我视野中模糊，消逝。</p>
 
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/青城山游记/" data-id="cic01rylv0003fa0qwsj0ug82" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-冰雨——股市篇" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/08/冰雨——股市篇/" class="article-date">
-  <time datetime="2015-07-08T07:22:02.000Z" itemprop="datePublished">2015-07-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/股票/">股票</a>
+        <div class="post-eof"></div>
+      
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
+
     
-    
-      <header class="article-header">
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/07/08/冰雨——股市篇/">
+                冰雨——股市篇
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2015-07-08
+        </span>
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/08/冰雨——股市篇/">冰雨——股市篇</a>
-    </h1>
-  
+          <span class="post-category">
+            &nbsp; | &nbsp; 分類於
+            
+              <a href="/categories/股票/">股票</a>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
-        <h2 id="冰雨－股市篇">冰雨－股市篇</h2><p>我是在等待一个反弹 还是在等待沈沦苦海</p>
+      
+
+      
+        
+          <h2 id="冰雨－股市篇">冰雨－股市篇</h2><p>我是在等待一个反弹 还是在等待沈沦苦海</p>
 <p>党妈情默默灌溉 没有人去管花谢花开</p>
 <p>无法肯定的消息 左右摇摆</p>
 <p>只好把心酸往深心里塞　　</p>
@@ -542,139 +876,193 @@ ga('send', 'pageview');
 <p>悬崖上的仓位 谁会敢去补</p>
 <p>给我个反弹回本，永远不再玩</p>
 
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/07/08/冰雨——股市篇/" data-id="cic01rymr000lfa0q8qzt9cro" class="article-share-link">Share</a>
+
+    <div class="post-footer">
+      
+
+      
+
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/UI设计/">UI设计</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS问题总结/">iOS问题总结</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/股票/">股票</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">4</span></li></ul>
+        <div class="post-eof"></div>
+      
     </div>
   </div>
 
-  
+
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS-Bug/">iOS Bug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/失眠-纠结-当年/">失眠 纠结 当年</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字体/">字体</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电量-状态栏/">电量 状态栏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诞生/">诞生</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/静态库/">静态库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/颜色-网站-设计/">颜色 网站 设计</a><span class="tag-list-count">1</span></li></ul>
-    </div>
   </div>
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/iOS-Bug/" style="font-size: 10px;">iOS Bug</a> <a href="/tags/失眠-纠结-当年/" style="font-size: 10px;">失眠 纠结 当年</a> <a href="/tags/字体/" style="font-size: 10px;">字体</a> <a href="/tags/电量-状态栏/" style="font-size: 10px;">电量 状态栏</a> <a href="/tags/诞生/" style="font-size: 10px;">诞生</a> <a href="/tags/静态库/" style="font-size: 10px;">静态库</a> <a href="/tags/颜色-网站-设计/" style="font-size: 10px;">颜色 网站 设计</a>
-    </div>
+  <div class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
   </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">11</span></li></ul>
-    </div>
-  </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2015/07/12/xcode6中添加自定义字体/">xcode6中添加自定义字体</a>
-          </li>
-        
-          <li>
-            <a href="/2015/07/10/NSDATA与NSString一些转换/">NSDATA与NSString一些转换</a>
-          </li>
-        
-          <li>
-            <a href="/2015/07/09/合并真机与模拟器的静态库（-a）/">合并真机与模拟器的静态库（.a）</a>
-          </li>
-        
-          <li>
-            <a href="/2015/07/09/iOS下如何隐藏电量等状态栏/">iOS下如何隐藏电量等状态栏</a>
-          </li>
-        
-          <li>
-            <a href="/2015/07/08/几个颜色的网站/">几个颜色的网站</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+        </div>
 
-  
-</aside>
         
       </div>
-      <div id="footer">
+
+
+      
   
-  <div id='foot-stars'></div>
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2015 Silverk<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="Silverk" />
+          <p class="site-author-name">Silverk</p>
+        </div>
+        <p class="site-description motion-element"></p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+        
+      </div>
+
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp; 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">Silverk</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
   </script>
 
-<script type="text/javascript">
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c710a06a54f9b8516e8a99d3f4001e4a";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-</div>
-    </div>
-    <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
   
-</nav>
-    
+  
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  
 
 
-<script src="/js/script.js" type="text/javascript"></script>
 
-  </div>
+
+  
+  
+
+  
+  <!-- lazyload -->
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+      <script type="text/javascript">
+        jQuery(function() {          
+            jQuery("#posts img").lazyload({
+              placeholder:"http://www.arao.me/loading.gif",  
+                effect:"fadeIn"
+              });
+            });
+    </script>   
 </body>
 </html>
