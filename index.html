@@ -168,6 +168,83 @@
           
           
             
+              <a class="post-title-link" href="/2015/07/13/获取短信验证码/">
+                获取短信验证码
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-07-13
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/iOS问题汇总/">iOS问题汇总</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/07/13/获取短信验证码/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/13/获取短信验证码/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>网上找到个点击事件获取激活码的代码：<br><figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">__block <span class="keyword">int</span> timeout=<span class="number">60</span>; <span class="comment">//倒计时时间</span></span><br><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>);</span><br><span class="line">dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, <span class="number">0</span>, <span class="number">0</span>,queue);</span><br><span class="line">dispatch_source_set_timer(_timer,dispatch_walltime(<span class="literal">NULL</span>, <span class="number">0</span>),<span class="number">1.0</span>*<span class="built_in">NSEC_PER_SEC</span>, <span class="number">0</span>); <span class="comment">//每秒执行</span></span><br><span class="line">dispatch_source_set_event_handler(_timer, ^&#123;</span><br><span class="line">    <span class="keyword">if</span>(timeout&lt;=<span class="number">0</span>)&#123; <span class="comment">//倒计时结束，关闭</span></span><br><span class="line">        dispatch_source_cancel(_timer);</span><br><span class="line">        <span class="built_in">dispatch_async</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            <span class="comment">//设置界面的按钮显示 根据自己需求设置</span></span><br><span class="line">            [_veryfyBtn setTitle:<span class="string">@"获取验证码"</span> forState: <span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">            _veryfyBtn<span class="variable">.enabled</span> = <span class="literal">YES</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//                        int minutes = timeout / 60;</span></span><br><span class="line">        <span class="comment">//                        int seconds = timeout % 60;</span></span><br><span class="line">        <span class="built_in">NSString</span> *strTime = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"倒计时%d秒"</span>,timeout];</span><br><span class="line">        <span class="built_in">dispatch_async</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            <span class="comment">//设置界面的按钮显示 根据自己需求设置</span></span><br><span class="line">            _veryfyBtn<span class="variable">.enabled</span> = <span class="literal">NO</span>;</span><br><span class="line">            _veryfyBtn<span class="variable">.backgroundColor</span> = LightLGray;</span><br><span class="line">            [_veryfyBtn setTitle:strTime forState: <span class="built_in">UIControlStateDisabled</span>];</span><br><span class="line">        &#125;);</span><br><span class="line">        timeout--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">dispatch_resume(_timer);</span><br></pre></td></tr></table></figure></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/07/12/xcode6中添加自定义字体/">
                 xcode6中添加自定义字体
               </a>
@@ -889,97 +966,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/08/冰雨——股市篇/">
-                冰雨——股市篇
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2015-07-08
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分类于
-            
-              <a href="/categories/股票/">股票</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/07/08/冰雨——股市篇/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/08/冰雨——股市篇/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="冰雨－股市篇">冰雨－股市篇</h2><p>我是在等待一个反弹 还是在等待沈沦苦海</p>
-<p>党妈情默默灌溉 没有人去管花谢花开</p>
-<p>无法肯定的消息 左右摇摆</p>
-<p>只好把心酸往深心里塞　　</p>
-<p>我是在等待反弹回本 (嗯) 难道只换回各种跌停</p>
-<p>一个人静静发呆 不知道底在哪里<br>　　<br>好好的上涨啊怎么会慢慢变坏</p>
-<p>冷冷的冰雨在脸上胡乱的拍　　</p>
-<p>暖暖的眼泪跟寒雨混成一块</p>
-<p>眼前的色彩忽然被掩盖　　</p>
-<p>跌停的影子无情在身边徘徊</p>
-<p>你就像一个刽子手把我出卖　　</p>
-<p>我的心彷佛被剌刀狠狠地宰</p>
-<p>悬崖上的跌停 谁会愿意接受最痛的意外</p>
-<p>悬崖上的仓位 谁会敢去补</p>
-<p>给我个反弹回本，永远不再玩</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -1018,21 +1004,21 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
