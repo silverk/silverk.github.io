@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="UIButton," />
 
 
 
@@ -55,7 +55,7 @@
 
 
 
-  <title> 冰雨——股市篇 // Silverk </title>
+  <title> UIButton 上文字图片对齐 // Silverk </title>
 </head>
 
 <body>
@@ -166,7 +166,7 @@
           
           
             
-              冰雨——股市篇
+              UIButton 上文字图片对齐
             
           
         </h1>
@@ -174,14 +174,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-07-08
+          发表于 2015-07-15
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/categories/股票/">股票</a>
+              <a href="/categories/iOS/">iOS</a>
 
               
               
@@ -194,8 +194,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/07/08/冰雨——股市篇/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/08/冰雨——股市篇/"></span>
+            <a href="/2015/07/15/UIButton-上文字图片对齐/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/15/UIButton-上文字图片对齐/"></span>
             </a>
           </span>
           
@@ -209,39 +209,36 @@
       
 
       
-        <h2 id="冰雨－股市篇">冰雨－股市篇</h2><p>我是在等待一个反弹 还是在等待沈沦苦海</p>
-<p>党妈情默默灌溉 没有人去管花谢花开</p>
-<p>无法肯定的消息 左右摇摆</p>
-<p>只好把心酸往深心里塞　　</p>
-<p>我是在等待反弹回本 (嗯) 难道只换回各种跌停</p>
-<p>一个人静静发呆 不知道底在哪里<br>　　<br>好好的上涨啊怎么会慢慢变坏</p>
-<p>冷冷的冰雨在脸上胡乱的拍　　</p>
-<p>暖暖的眼泪跟寒雨混成一块</p>
-<p>眼前的色彩忽然被掩盖　　</p>
-<p>跌停的影子无情在身边徘徊</p>
-<p>你就像一个刽子手把我出卖　　</p>
-<p>我的心彷佛被剌刀狠狠地宰</p>
-<p>悬崖上的跌停 谁会愿意接受最痛的意外</p>
-<p>悬崖上的仓位 谁会敢去补</p>
-<p>给我个反弹回本，永远不再玩</p>
+        <p>项目上让button上文字与图片垂直对齐，找了很久的方法，网上比较普遍的都是setImageEdgeInsets，setTitleEdgeInsets这两个方法，不过大部分都是直接写数字，在文字长短不确定的时候调半天只能调一次。所以采用了下面方法：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//button.imageEdgeInsets = UIEdgeInsetsMake(-button.titleLabel.frame.size.height, 0, 0, -button.titleLabel.frame.size.width);&#10;// &#30001;&#20110;iOS8&#20013;titleLabel&#30340;size&#20026;0&#65292;&#29992;&#19978;&#38754;&#36825;&#26679;&#35774;&#32622;&#26377;&#38382;&#39064;&#65292;&#20462;&#25913;&#19968;&#19979;&#21363;&#21487;&#10;[button setImageEdgeInsets:UIEdgeInsetsMake(-button.titleLabel.intrinsicContentSize.height, 0.0, 0.0, -button.titleLabel.intrinsicContentSize.width)];&#10;[button setTitleEdgeInsets:UIEdgeInsetsMake(0.0, -button.imageView.frame.size.width, -button.imageView.frame.size.height, 0.0)];</span><br></pre></td></tr></table></figure>
+<p> 附上其他几种对齐方式：</p>
+<p> 文字左对齐，图片右对齐:<br> <figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">button<span class="variable">.titleEdgeInsets</span> = <span class="built_in">UIEdgeInsetsMake</span>(<span class="number">0</span>, -button<span class="variable">.imageView</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span> - button<span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span> + button<span class="variable">.titleLabel</span><span class="variable">.intrinsicContentSize</span><span class="variable">.width</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">   button<span class="variable">.imageEdgeInsets</span> = <span class="built_in">UIEdgeInsetsMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, -button<span class="variable">.titleLabel</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span> - button<span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span> + button<span class="variable">.imageView</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span>);</span><br></pre></td></tr></table></figure></p>
+<p> 如果觉得图片和文字离的太近了，稍微分开一点：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CGFloat offset = 40.0f;&#10;button.titleEdgeInsets = UIEdgeInsetsMake(0, -button.imageView.frame.size.width, -button.imageView.frame.size.height-offset/2, 0);&#10;// button.imageEdgeInsets = UIEdgeInsetsMake(-button.titleLabel.frame.size.height-offset/2, 0, 0, -button.titleLabel.frame.size.width);&#10;// &#30001;&#20110;iOS8&#20013;titleLabel&#30340;size&#20026;0&#65292;&#29992;&#19978;&#38754;&#36825;&#26679;&#35774;&#32622;&#26377;&#38382;&#39064;&#65292;&#20462;&#25913;&#19968;&#19979;&#21363;&#21487;&#10;button.imageEdgeInsets = UIEdgeInsetsMake(-button.titleLabel.intrinsicContentSize.height-offset/2, 0, 0, -button.titleLabel.intrinsicContentSize.width);</span><br></pre></td></tr></table></figure>
+<p>设置如下布局后，图片和文字都居中显示。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">button.titleEdgeInsets = UIEdgeInsetsMake(0, -button.imageView.frame.size.width, 0, 0);&#10;// button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -button.titleLabel.frame.size.width);&#10;// &#30001;&#20110;iOS8&#20013;titleLabel&#30340;size&#20026;0&#65292;&#29992;&#19978;&#38754;&#36825;&#26679;&#35774;&#32622;&#26377;&#38382;&#39064;&#65292;&#20462;&#25913;&#19968;&#19979;&#21363;&#21487;&#10;button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -button.titleLabel.intrinsicContentSize.width);</span><br></pre></td></tr></table></figure>
 
       
     </div>
 
     <div class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/UIButton/"> #UIButton </a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/08/青城山游记/">青城山游记</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/08/今日一喜/">今日一喜</a>
+              <a href="/2015/07/15/nav高度问题/">nav高度问题</a>
             
           </div>
         </div>
@@ -261,8 +258,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/07/08/冰雨——股市篇/"
-               data-title="冰雨——股市篇" data-url="http://yoursite.com/2015/07/08/冰雨——股市篇/">
+          <div class="ds-thread" data-thread-key="2015/07/15/UIButton-上文字图片对齐/"
+               data-title="UIButton 上文字图片对齐" data-url="http://yoursite.com/2015/07/15/UIButton-上文字图片对齐/">
           </div>
         
       </div>
@@ -374,7 +371,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#冰雨－股市篇"><span class="nav-number">1.</span> <span class="nav-text">冰雨－股市篇</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

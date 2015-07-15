@@ -168,6 +168,90 @@
           
           
             
+              <a class="post-title-link" href="/2015/07/15/UIButton-上文字图片对齐/">
+                UIButton 上文字图片对齐
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-07-15
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/iOS/">iOS</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/07/15/UIButton-上文字图片对齐/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/15/UIButton-上文字图片对齐/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>项目上让button上文字与图片垂直对齐，找了很久的方法，网上比较普遍的都是setImageEdgeInsets，setTitleEdgeInsets这两个方法，不过大部分都是直接写数字，在文字长短不确定的时候调半天只能调一次。所以采用了下面方法：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//button.imageEdgeInsets = UIEdgeInsetsMake(-button.titleLabel.frame.size.height, 0, 0, -button.titleLabel.frame.size.width);&#10;// &#30001;&#20110;iOS8&#20013;titleLabel&#30340;size&#20026;0&#65292;&#29992;&#19978;&#38754;&#36825;&#26679;&#35774;&#32622;&#26377;&#38382;&#39064;&#65292;&#20462;&#25913;&#19968;&#19979;&#21363;&#21487;&#10;[button setImageEdgeInsets:UIEdgeInsetsMake(-button.titleLabel.intrinsicContentSize.height, 0.0, 0.0, -button.titleLabel.intrinsicContentSize.width)];&#10;[button setTitleEdgeInsets:UIEdgeInsetsMake(0.0, -button.imageView.frame.size.width, -button.imageView.frame.size.height, 0.0)];</span><br></pre></td></tr></table></figure>
+<p> 附上其他几种对齐方式：</p>
+<p> 文字左对齐，图片右对齐:<br> <figure class="highlight obj-c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">button<span class="variable">.titleEdgeInsets</span> = <span class="built_in">UIEdgeInsetsMake</span>(<span class="number">0</span>, -button<span class="variable">.imageView</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span> - button<span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span> + button<span class="variable">.titleLabel</span><span class="variable">.intrinsicContentSize</span><span class="variable">.width</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">   button<span class="variable">.imageEdgeInsets</span> = <span class="built_in">UIEdgeInsetsMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, -button<span class="variable">.titleLabel</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span> - button<span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span> + button<span class="variable">.imageView</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span>);</span><br></pre></td></tr></table></figure></p>
+<p> 如果觉得图片和文字离的太近了，稍微分开一点：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CGFloat offset = 40.0f;&#10;button.titleEdgeInsets = UIEdgeInsetsMake(0, -button.imageView.frame.size.width, -button.imageView.frame.size.height-offset/2, 0);&#10;// button.imageEdgeInsets = UIEdgeInsetsMake(-button.titleLabel.frame.size.height-offset/2, 0, 0, -button.titleLabel.frame.size.width);&#10;// &#30001;&#20110;iOS8&#20013;titleLabel&#30340;size&#20026;0&#65292;&#29992;&#19978;&#38754;&#36825;&#26679;&#35774;&#32622;&#26377;&#38382;&#39064;&#65292;&#20462;&#25913;&#19968;&#19979;&#21363;&#21487;&#10;button.imageEdgeInsets = UIEdgeInsetsMake(-button.titleLabel.intrinsicContentSize.height-offset/2, 0, 0, -button.titleLabel.intrinsicContentSize.width);</span><br></pre></td></tr></table></figure>
+<p>设置如下布局后，图片和文字都居中显示。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">button.titleEdgeInsets = UIEdgeInsetsMake(0, -button.imageView.frame.size.width, 0, 0);&#10;// button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -button.titleLabel.frame.size.width);&#10;// &#30001;&#20110;iOS8&#20013;titleLabel&#30340;size&#20026;0&#65292;&#29992;&#19978;&#38754;&#36825;&#26679;&#35774;&#32622;&#26377;&#38382;&#39064;&#65292;&#20462;&#25913;&#19968;&#19979;&#21363;&#21487;&#10;button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -button.titleLabel.intrinsicContentSize.width);</span><br></pre></td></tr></table></figure>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/07/15/nav高度问题/">
                 nav高度问题
               </a>
@@ -874,87 +958,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/08/小场景电影/">
-                小场景电影
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于 2015-07-08
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分类于
-            
-              <a href="/categories/随笔/">随笔</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/07/08/小场景电影/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/08/小场景电影/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="小场景电影">小场景电影</h2><p>小场景电影拼的就是剧情与演技，剧情靠的就是对白。</p>
-<p>《这个男人来自地球》是我看的最“科幻”的科幻电影了。全场没有高特效也没有奇形怪状的生物，有的只是一间房、一群正常人，再加上一场非正常的侃大山。但就是这么简单的至极点的场景，却包含了几千年的历史讲述着“神”的传奇。</p>
-<p>《狙击电话亭》也是一部。全部电影集中在那条街那个孤零零的电话亭中。悬疑，阴谋，威胁，死亡，妥协，反抗…..通过一个电话亭，诠释的淋漓尽致。</p>
-<p>《杀戮》走起了生活路线：一个客厅，两个家庭，四个人。起源仅仅是两家小孩打架，处理的过程中却暴露出成人，家庭，男人，女人种种矛盾。</p>
-<p>喜欢这种电影，想想如果中国整几个天南海北的人一起侃大山（弄个好点的剧情），也许更会出彩。</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -993,7 +996,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1007,7 +1010,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
